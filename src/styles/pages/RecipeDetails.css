@@ -1,0 +1,40 @@
+/* RecipeDetails.css */
+.recipe-details {
+  padding: 20px;
+  color: #fff;
+}
+
+.recipe-details h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.recipe-details__container {
+  display: flex;
+  gap: 20px; /* Adjust the gap as needed */
+}
+
+.recipe-details__image-column {
+  width: 50%; /* Adjust the width as needed */
+}
+
+.recipe-details__text-column {
+  width: 50%; /* Adjust the width as needed */
+}
+
+.recipe-details__image {
+  width: 100%;
+  height: 100vh;
+  border-radius: 8px;
+  object-fit: cover; /* Make sure the image fills the container nicely */
+}
+
+/* Optional: Add some styling for the ingredients list and instructions */
+.recipe-details ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.recipe-details li {
+  margin-bottom: 5px;
+}
