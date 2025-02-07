@@ -1,8 +1,8 @@
-// src/pages/Home.jsx
+
 import React, { useEffect, useState } from "react";
 import RecipeCard from "../Components/RecipeCard";
 import SearchBar from "../Components/SearchBar";
-import FilterSection from "../Components/FilterSection"; // Import FilterSection
+import FilterSection from "../Components/FilterSection"; 
 import "../styles/pages/Home.css";
 import "../styles/components/SearchBar.css";
 import axios from "axios";
@@ -13,9 +13,8 @@ const Home = () => {
   const [recipes, setRecipes] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [filters, setFilters] = useState({ category: "", area: "" }); // State for filters
+  const [filters, setFilters] = useState({ category: "", area: "" }); 
 
-  // Function to fetch recipes using axios with filters
   const fetchRecipes = async (query = "", filters = {}) => {
     setLoading(true);
     setError(null);
@@ -40,11 +39,11 @@ const Home = () => {
   };
 
   useEffect(() => {
-    fetchRecipes("", filters); // Fetch initial recipes with any default filters
-  }, [filters]); // Refetch when filters change
+    fetchRecipes("", filters);
+  }, [filters]); 
 
   const handleFilterChange = (newFilters) => {
-    setFilters(newFilters); // Update the filters state
+    setFilters(newFilters); 
   };
 
   return (

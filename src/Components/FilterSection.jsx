@@ -1,6 +1,5 @@
-// src/components/FilterSection.jsx
 import React, { useState } from "react";
-import "../styles/components/FilterSection.css"; // Create this CSS file
+import "../styles/components/FilterSection.css"; 
 
 const FilterSection = ({ onFilter }) => {
   const [category, setCategory] = useState("");

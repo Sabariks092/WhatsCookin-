@@ -9,7 +9,7 @@ export const Footer = () => {
                     @2024 Designed & Developed by 
                 </p>
                 <a
-                    href="https://sabarikportfolio.netlify.app" // Replace with your portfolio URL
+                    href="https://sabarikportfolio.netlify.app"
                     target="_blank"
                     rel="noopener noreferrer"
                     style={styles.link}

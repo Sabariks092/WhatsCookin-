@@ -7,7 +7,7 @@ const RecipeList = ({ recipes }) => {
     <div className="recipe-list">
       {recipes.map((recipe) => (
         <RecipeCard
-          key={recipe.idMeal} // Use a unique key for each card
+          key={recipe.idMeal}
           id={recipe.idMeal}
           title={recipe.strMeal}
           image={recipe.strMealThumb}

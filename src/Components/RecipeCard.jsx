@@ -6,8 +6,8 @@ const RecipeCard = ({ title, image, category, id }) => {
   const navigate = useNavigate();
 
   const handleSelect = () => {
-    console.log("Navigating to recipe with ID:", id); // Debugging step
-    navigate(`/recipe/${id}`); // Navigate to RecipeDetails page
+    console.log("Navigating to recipe with ID:", id); 
+    navigate(`/recipe/${id}`); 
   };
 
   return (

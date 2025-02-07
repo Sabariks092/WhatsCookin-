@@ -5,7 +5,7 @@ const SearchBar = ({ onSearch }) => {
 
   const handleSearch = (e) => {
     e.preventDefault();
-    onSearch(searchTerm); // Trigger the onSearch callback
+    onSearch(searchTerm);
   };
 
   return (
