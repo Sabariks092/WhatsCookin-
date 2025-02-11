@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-import "bootstrap/dist/css/bootstrap.min.css"; 
+import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles/pages/RecipeDetails.css";
 
 const RecipeDetails = () => {
@@ -58,39 +58,45 @@ const RecipeDetails = () => {
   return (
     <div className="container text-white recipe-details">
       <h1>{recipe.strMeal}</h1>
+      <h5 className="text-center">
+        ({recipe.strArea})
+      </h5>
+      <hr />
       <div className="row">
-        <div className="col-md-6 d-flex justify-content-center">
+        <div className="col-md-6 mb-3 d-flex align-items-center justify-content-center">
           <img
             src={recipe.strMealThumb}
             alt={recipe.strMeal}
-            className="img-fluid rounded"
-            style={{height:"80vh"}}
+            className="img-fluid rounded-4"
+            style={{ height: "60vh",border:"1px solid",boxShadow:"2px 2px 8px red" }}
           />
         </div>
-        <div className="col-md-6 text-white">
-          <p>
-            <strong>Category:</strong> {recipe.strCategory}
-          </p>
-          <p>
-            <strong>Area:</strong> {recipe.strArea}
-          </p>
-          <h3>Ingredients:</h3>
-          <ul>
-            {Array.from({ length: 20 }).map((_, i) => {
-              const ingredient = recipe[`strIngredient${i + 1}`];
-              const measure = recipe[`strMeasure${i + 1}`];
-              return ingredient ? (
-                <li key={i}>
-                  {ingredient} - {measure}
-                </li>
-              ) : null;
-            })}
-          </ul>
-          <p>
-            <strong>Instructions:</strong>
-          </p>
-          <p>{recipe.strInstructions}</p>
+        <div className="col-md-6 row align-items-center">
+          <div className="col-md-6 text-white justify-content-center">
+
+            <h5>Ingredients :</h5>
+            <ul>
+              {Array.from({ length: 20 }).map((_, i) => {
+                const ingredient = recipe[`strIngredient${i + 1}`];
+                const measure = recipe[`strMeasure${i + 1}`];
+                return ingredient ? (
+                  <li key={i}>
+                    {ingredient} - {measure}
+                  </li>
+                ) : null;
+              })}
+            </ul>
+          </div>
         </div>
+        <hr />
+        <div className="text-center">
+          <h5 >
+            <strong>Instructions:</strong>
+          </h5>
+          <p>{recipe.strInstructions}</p>
+        
+         </div>
+         <p className="text-center"> ( Video Reference : <a href={recipe.strYoutube} style={{color:"red"}} className="text-center">Watch on Youtube</a> )</p>
       </div>
     </div>
   );
