@@ -11,7 +11,7 @@ const RecipeCard = ({ title, image, category, id }) => {
   };
 
   return (
-    <div className="recipe-card" onClick={handleSelect}>
+    <div className="recipe-card text-white" onClick={handleSelect}>
       <img src={image} alt={title} className="recipe-card__image" />
       <div className="recipe-card__content">
         <h3>{title}</h3>

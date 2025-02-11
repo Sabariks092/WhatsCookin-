@@ -1,5 +1,5 @@
 .recipe-card {
-    background-color: #ffffff;
+    background-color: rgb(19, 18, 18);
     border: 1px solid #ddd;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -29,12 +29,12 @@
     font-size: 1.2rem;
     font-weight: bold;
     margin: 10px 0 5px;
-    color: #333;
+    color: #ffffff;
   }
   
   .recipe-card__content p {
     font-size: 0.9rem;
-    color: #777;
+    color: #b9b9b9;
     margin: 0;
   }
   
